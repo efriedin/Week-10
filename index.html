@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie List</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <br />
+
+        <!--Input-->
+        <div class="card">
+            <div class="card body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-list-name">Movie List Name</label>
+                            <input type="text" class="form-control" id="new-list-name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="new-movie-list" class="btn btn-primary form-control">Add Movie List</button>
+        </div>
+    </div><br />
+
+    <div id="lists">
+
+    </div>
+
+
+
+    <script src="movies.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
