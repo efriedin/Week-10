@@ -30,7 +30,7 @@ class List {
 let lists = []; //stores each movie list
 let movieId = 0; //id to identify each movie list
 
-
+//using event listener to add movies to lists
 onCLick('new-movie-list', () => {
     lists.push(new List(movieId++, getValue('new-list-name')));
     drawDOM();
@@ -100,7 +100,7 @@ function createDeleteListButton(list) {
     return btn;
 }
 
-
+//implement button
 function createNewMovieButton(list) {
     let btn = document.createElement('button');
     btn.className = 'btn btn-primary';
