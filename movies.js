@@ -55,7 +55,7 @@ function drawDOM(){
     for (list of lists ) { //iterate through each instance of list class
         let table = createMovieListTable(list);
         let title = document.createElement('h2');
-        title.innerHtml = list.name; //title for list class
+        title.innerHTML = list.name; //title for list class
         title.appendChild(createDeleteListButton(list)); //generete delete button
         listDiv.appendChild(title);
         listDiv.appendChild(table);
@@ -68,8 +68,8 @@ function drawDOM(){
 //implement create movie row
 function createMovieRow(list, table, movies) {
     let row = table.insertRow(2);
-    row.insertCell(0).innerHtml = movies.name;
-    row.insertCell(1).innerHtml = movies.genre;
+    row.insertCell(0).innerHTML = movies.name;
+    row.insertCell(1).innerHTML = movies.genre;
     let actions = row.insertCell(2);
     actions.appendChild(createDeleteRowButton(list, movies));
 }
@@ -122,7 +122,7 @@ function createMovieListTable(list) {
     let row = table.insertRow(0);
     let nameColumn = document.createElement('th');
     let genreColumn = document.createElement('th');
-    nameColumn.innerHTML = 'Name';
+    nameColumn.innerHTML = 'Movie Name';
     genreColumn.innerHTML = 'Genre';
     row.appendChild(nameColumn);
     row.appendChild(genreColumn);
